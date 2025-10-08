@@ -2,7 +2,7 @@
 
 import { z } from "zod";
 import { db } from "@/lib/firebase";
-import { ref, push, set } from "firebase/database";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -28,13 +28,12 @@ export async function saveContactMessage(prevState: any, formData: FormData) {
   const { name, email, message } = validatedFields.data;
 
   try {
-    const contactsRef = ref(db, "contacts");
-    const newContactRef = push(contactsRef);
-    await set(newContactRef, {
+    const contactsCollectionRef = collection(db, "contacts");
+    await addDoc(contactsCollectionRef, {
       name,
       email,
       message,
-      submittedAt: new Date().toISOString(),
+      submittedAt: serverTimestamp(),
     });
 
     return {

@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp, getApps, type FirebaseApp } from "firebase/app";
-import { getDatabase } from "firebase/database";
+import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -21,6 +21,6 @@ if (!getApps().length) {
   app = getApps()[0];
 }
 
-const db = getDatabase(app, process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL);
+const db = getFirestore(app);
 
 export { app, db };

@@ -2,6 +2,7 @@ import { Section } from "./section";
 import { ContactForm } from "./contact-form";
 import { Mail, MapPin, Github, Linkedin } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export function ContactSection() {
   return (
