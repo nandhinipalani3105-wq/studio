@@ -28,10 +28,10 @@ export function ContactSection() {
              <h3 className="text-xl font-semibold pt-4">Follow Me</h3>
             <div className="flex items-center gap-4">
                 <Button variant="outline" size="icon" asChild>
-                    <Link href="#" target="_blank"><Github className="w-5 h-5" /></Link>
+                    <Link href="https://github.com/nandhini-p" target="_blank" rel="noopener noreferrer"><Github className="w-5 h-5" /></Link>
                 </Button>
                 <Button variant="outline" size="icon" asChild>
-                    <Link href="#" target="_blank"><Linkedin className="w-5 h-5" /></Link>
+                    <Link href="https://linkedin.com/in/nandhini-p" target="_blank" rel="noopener noreferrer"><Linkedin className="w-5 h-5" /></Link>
                 </Button>
             </div>
         </div>
