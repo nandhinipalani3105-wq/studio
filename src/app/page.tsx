@@ -1,23 +1,9 @@
-import { Header } from "@/components/header";
-import { HomeSection } from "@/components/home-section";
-import { AboutSection } from "@/components/about-section";
-import { SkillsSection } from "@/components/skills-section";
-import { ProjectsSection } from "@/components/projects-section";
-import { ContactSection } from "@/components/contact-section";
-import { Footer } from "@/components/footer";
-
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-1">
-        <HomeSection />
-        <AboutSection />
-        <SkillsSection />
-        <ProjectsSection />
-        <ContactSection />
-      </main>
-      <Footer />
-    </div>
+    <main style={{ textAlign: "center", padding: "60px" }}>
+      <h1>Welcome to My Website!</h1>
+      <p>This website is built using Next.js and hosted on GitHub Pages.</p>
+      <p>🚀 I’m customizing it step by step!</p>
+    </main>
   );
 }
